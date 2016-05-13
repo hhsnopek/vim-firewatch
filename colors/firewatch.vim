@@ -1,53 +1,67 @@
+" Firewatch Color Scheme
+
 set bg=light
-highlight clear
+hi clear
 if exists("syntax_on")
 	syntax reset
 endif
+
 let g:colors_name = "firewatch"
 
-" cyan 			#56b6c2 73
-" blue			#ebebff 255
-" purple		#dd672c 166
-" green			#c8ae9d 181
-" red 1			#e06c75 168
-" red 2			#be5046 131
-" orange 1		#d19a66 173
-" orange 2		#e5c07b 180
-" synatx-fg 	#abb2bf 249
-" syntax-bg 	#282c34 236
-" syntax-accent	#528bff 69
-"
-" variable 	red 1
-" constant	orange 1
-" property	syntax-fg
-" value		syntax-fg
-" function	blue
-" method	blue
-" class		orange 2
-" keyword	purple
-" tag		red 1
-" attribute	orange 1
-" import	purple
-" snippert	green
-"
-" syntax text color 		syntax-fg
-" syntax cursor color 		syntax-accent
-" syntax selection			lighten(syntax-background-color, 10%)
-" syntax background-color 	syntax-bg
+" colors
+let s:cyan = 73
+let s:blue = 255
+let s:purple = 166
+let s:green = 181
+let s:red_1 = 168
+let s:red_2 = 131
+let s:orange_1 = 174
+let s:orange_2 = 180
+let s:syntax_fg = 249
+let s:syntax_bg = 236
+let s:syntax_accent = 69
 
-hi Comment		guifg=#252931 guibg=NONE ctermfg=235 ctermbg=NONE term=NONE " Comments
-hi Normal 		guifg=#abb2bf guibg=NONE ctermfg=249 ctermbg=NONE term=NONE " Default Text
-hi Constant 	guifg=#d19a66 guibg=NONE ctermfg=173 ctermbg=NONE term=NONE " const string, int ...
-hi Type			guifg=#e06c75 guibg=NONE ctermfg=168 ctermbg=NONE term=NONE " string, int, float .\..
-hi Typedef		guifg=#dd672c guibg=NONE ctermfg=166 ctermbg=NONE term=NONE " a typedef
-hi Function		guifg=#ebebff guibg=NONE ctermfg=255 ctermbg=NONE term=NONE " class, method, fn
-hi Identifier	guifg=#ebebff guibg=NONE ctermfg=255 ctermbg=NONE term=NONE " like Function
-hi StorageClass	guifg=#dd672c guibg=NONE ctermfg=166 ctermbg=NONE term=NONE " Storage Type
-hi Operator 	guifg=#56b6c2 guibg=NONE ctermfg=73  ctermbg=NONE term=NONE " Operators
-hi Special		guifg=#c8ae9d guibg=NONE ctermfg=181 ctermbg=NONE term=NONE 
+" colors: hex
+let s:hex_cyan = "#56b6c2"
+let s:hex_blue = "#ebebff"
+let s:hex_purple = "#dd672c"
+let s:hex_green = "#c8ae9d"
+let s:hex_red_1 = "#e06c75"
+let s:hex_red_2 = "#be5046"
+let s:hex_orange_1 = "#d19a66"
+let s:hex_orange_2 = "#e5c07b"
+let s:hex_syntax_fg = "#abb2bf"
+let s:hex_syntax_bg = "#282c34"
+let s:hex_syntax_accent = "#528bff"
+
+" aliases
+exe "let s:bg_none = ' guibg=NONE ctermbg=NONE'"
+exe "let s:fg_cyan = ' guifg=" .s:hex_cyan. " ctermfg=" .s:cyan. "'"
+exe "let s:fg_blue = ' guifg=" .s:hex_blue. " ctermfg=" .s:blue. "'"
+exe "let s:fg_purple = ' guifg=" .s:hex_purple. " ctermfg=" .s:purple. "'"
+exe "let s:fg_green = ' guifg=" .s:hex_green. " ctermfg=" .s:green. "'"
+exe "let s:fg_red_1 = ' guifg=" .s:hex_red_1. " ctermfg=" .s:red_1. "'"
+exe "let s:fg_red_2 = ' guifg=" .s:hex_red_2. " ctermfg=" .s:red_2. "'"
+exe "let s:fg_orange_1 = ' guifg=" .s:hex_orange_1. " ctermfg=" .s:orange_1. "'"
+exe "let s:fg_orange_2 = ' guifg=" .s:hex_orange_2. " ctermfg=" .s:orange_2. "'"
+exe "let s:fg_syntax_fg = ' guifg=" .s:hex_syntax_fg. " ctermfg=" .s:syntax_fg. "'"
+exe "let s:fg_syntax_bg = ' guifg=" .s:hex_syntax_bg. " ctermfg =" .s:syntax_bg. "'"
+exe "let s:fg_syntax_accent = ' guifg=" .s:hex_syntax_accent. " ctermfg=" .s:syntax_accent. "'"
+
+" Definitions
+exe "hi! Comment" .s:bg_none .s:fg_syntax_bg
+exe "hi! Normal" .s:bg_none .s:fg_syntax_fg
+exe "hi! Constant" .s:bg_none .s:fg_orange_1
+exe "hi! Type" .s:bg_none .s:fg_orange_1
+exe "hi! Typedef" .s:bg_none .s:fg_red_1
+exe "hi! Function" .s:bg_none .s:fg_cyan
+exe "hi! Identifier" .s:bg_none .s:fg_blue
+exe "hi! StorageClass" .s:bg_none .s:fg_purple
+exe "hi! Operator" .s:bg_none .s:fg_syntax_fg
+exe "hi! Special" .s:bg_none .s:fg_syntax_accent
 
 " html 
-hi htmlString 		guifg=#e5c07b guibg=NONE ctermfg=180 ctermbg=NONE term=NONE cterm=NONE
+exe "hi! htmlString" .s:bg_none .s:fg_green
 hi htmlTag 			guifg=#ebebff guibg=NONE ctermfg=255 ctermbg=NONE term=NONE cterm=NONE
 hi htmlLink			guifg=#abb2bf guibg=NONE ctermfg=249 ctermbg=NONE term=NONE cterm=NONE
 hi link htmlTagName Type
@@ -62,23 +76,25 @@ hi link htmlH5 			htmlH4
 hi link htmlH6			htmlH5
 hi link htmlSpecialChar Constant
 
-" markdown
+" markdown: https://github.com/plasticboy/vim-markdown 
 hi mkdUrl			guifg=#d19a66 guibg=NONE ctermfg=180 ctermbg=NONE cterm=UNDERLINE
 hi mkdLink			guifg=#e5c07b guibg=NONE ctermfg=180 ctermbg=NONE cterm=NONE
 hi link mkdCode			Function
 hi link mkdDelimiter 	Type
 
-" javascript
+" javascript: https://github.com/pangloss/vim-javascript
 hi link jsGlobalObjects htmlString
 hi link jsPrototype 	htmlString
 hi link jsArgsObj 		htmlString
 
-" go
+" go: https://github.com/fatih/vim-go
 hi link goDirective 	Type
 hi link goDeclaration 	Type
 hi link goDeclType		Type
 hi link goType			Type
-hi link goStructDef		htmlString
-hi link goMethod		Type
+exe "hi! goStructDef" .s:bg_none .s:fg_orange_2
+hi link goFunction		Identifier
+hi link goMethod		Function
+hi link goField			Type
 hi link goPointer		Type
 hi link goString		htmlString
