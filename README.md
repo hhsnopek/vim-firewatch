@@ -1,8 +1,8 @@
-# 🔥 Firewatch Color Scheme
-
-A theme based on [firewatch-syntax](https://github.com/SebastianSzturo/firewatch-syntax) for atom, but for vim!
-
-<p align='center'><img alt='Firewatch Go screenshot' src='https://cldup.com/6tL84RGEdQ.png'/></p>
+<div align='center'>
+  <h1>🔥 Firewatch Color Scheme 🔥</h1>
+  <p>A theme based on <a href='https://github.com/SebastianSzturo/firewatch-syntax'>firewatch-syntax</a> for atom, but for vim!</p>
+  <img alt='Firewatch Go Screenshot' src='https://cldup.com/6tL84RGEdQ.png'/>
+</div>
 
 ## Installation
 ### Manual
