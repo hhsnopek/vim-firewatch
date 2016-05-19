@@ -37,7 +37,7 @@ let s:hex_gray_dark = "#282c34"
 " aliases
 exe "let s:bg_none      = ' guibg=NONE                  ctermbg=NONE'"
 exe "let s:fg_cyan      = ' guifg=" .s:hex_cyan.      " ctermfg=" .s:cyan. "'"
-exe "let s:fg_blue      = ' guifg=" .s:.hex_blue.     " ctermfg=" .s:.blue. "'"
+exe "let s:fg_blue      = ' guifg=" .s:hex_blue.      " ctermfg=" .s:blue. "'"
 exe "let s:fg_red       = ' guifg=" .s:hex_red.       " ctermfg=" .s:red. "'"
 exe "let s:fg_red_dark  = ' guifg=" .s:hex_red_dark.  " ctermfg=" .s:red_dark. "'"
 exe "let s:fg_orange    = ' guifg=" .s:hex_orange.    " ctermfg=" .s:orange. "'"
@@ -52,18 +52,20 @@ exe "let s:italic       = ' cterm=ITALIC'"
 exe "let s:underline    = ' cterm=UNDERLINE'"
 
 " definitions
-exe "hi! Comment"      .s:bg_none .s:fg_gray_dark
 exe "hi! Normal"       .s:bg_none .s:fg_gray
+exe "hi! Comment"      .s:bg_none .s:fg_gray_dark
 exe "hi! Constant"     .s:bg_none .s:fg_red
-exe "hi! Type"         .s:bg_none .s:fg_red
-exe "hi! Typedef"      .s:bg_none .s:fg_red_dark
-exe "hi! Conditional"  .s:bg_none .s:fg_orange
-exe "hi! Function"     .s:bg_none .s:fg_cyan
+exe "hi! String"       .s:bg_none .s:fg_tan
 exe "hi! Identifier"   .s:bg_none .s:fg_white
-exe "hi! StorageClass" .s:bg_none .s:fg_orange
+exe "hi! Function"     .s:bg_none .s:fg_cyan
+exe "hi! Statement"    .s:bg_none .s:fg_orange
 exe "hi! Operator"     .s:bg_none .s:fg_gray
+exe "hi! PreProc"      .s:bg_none .s:fg_pink
+exe "hi! PreCondit"    .s:bg_none .s:fg_pink_dark
+exe "hi! Type"         .s:bg_none .s:fg_red
 exe "hi! Special"      .s:bg_none .s:fg_blue
-exe "hi! PreProc"      .s:bg_none .s:fg_blue
+
+" editor
 exe "hi! LineNr"       .s:fg_gray_dark
 
 " html
