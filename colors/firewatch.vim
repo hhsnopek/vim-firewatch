@@ -91,9 +91,9 @@ hi link mkdCode      Function
 hi link mkdDelimiter Type
 
 " javascript: https://github.com/pangloss/vim-javascript
-hi link jsGlobalObjects htmlString
-hi link jsPrototype     htmlString
-hi link jsArgsObj       htmlString
+hi link jsGlobalObjects String
+hi link jsPrototype     String
+hi link jsArgsObj       String
 
 " go: https://github.com/fatih/vim-go
 hi link goDirective    Type
@@ -113,12 +113,21 @@ hi link goString       htmlString
 " vim
 hi link vimFunction  Function
 hi link vimCommand   Function
-hi link vimString    htmlString
+hi link vimString    String
 hi link vimVar       Type
 hi link vimNumber    Normal
 hi link vimHiGroup   Normal
 hi link vimHLGroup   vimHiGroup
 hi link vimGroup     vimHLGroup
+hi link vimFunc      Function
 hi link vimUserFunc  Function
 hi link vimNotFunc   StorageClass
 hi link vimIsCommand StorageClass
+hi link vimParenSep  Normal
+
+" Netrw
+exe "hi! netrwDir" .s:bg_none .s:fg_red
+exe "hi! netrwClassify" .s:bg_none .s:fg_tan
+exe "hi! netrwCmdSep" .s:bg_none .s:fg_tan
+exe "hi! netrwList" .s:bg_none .s:fg_red
+exe "hi! netrwVersion" .s:bg_none .s:fg_cyan
