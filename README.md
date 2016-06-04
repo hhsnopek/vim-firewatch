@@ -5,6 +5,8 @@
 </div>
 
 ## Installation
+Add `colorscheme firewatch` to your `.vimrc`
+
 ### Manual
 ```
 git clone https://github.com/hhsnopek/vim-firewatch.git; \
@@ -13,6 +15,14 @@ mv ./vim-firewatch/colors/firewatch.vim ~/.vim/colors/firewatch.vim
 
 ### Pathogen
 `git clone https://github.com/hhsnopek/vim-firewatch.git ~/.vim/bundle/vim-firewatch`
+
+## Modified Syntax
+- html
+- vim
+- netrw
+- markdown: [plasticboy/vim-markdown](//github.com/plasticboy/vim-markdown)
+- javascript: [pnagloss/vim-javascript](//github.com/pnagloss/vim-javascript)
+- go: [fatih/vim-go](//github.com/fatih/vim-go)
 
 ## License
 MIT License - see `LICENSE` for more details.
