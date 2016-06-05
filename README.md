@@ -21,7 +21,7 @@ mv ./vim-firewatch/colors/firewatch.vim ~/.vim/colors/firewatch.vim
 - vim
 - netrw
 - markdown: [plasticboy/vim-markdown](//github.com/plasticboy/vim-markdown)
-- javascript: [pnagloss/vim-javascript](//github.com/pnagloss/vim-javascript)
+- javascript: [pangloss/vim-javascript](//github.com/pangloss/vim-javascript)
 - go: [fatih/vim-go](//github.com/fatih/vim-go)
 
 ## License
