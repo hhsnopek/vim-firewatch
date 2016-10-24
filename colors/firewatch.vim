@@ -90,7 +90,7 @@ hi link htmlSpecialChar Constant
 exe "hi! mkdUrl"        .s:bg_none .s:fg_red .s:underline
 exe "hi! mkdLink"       .s:bg_none .s:fg_tan
 exe "hi! mkdBlockQuote" .s:bg_none .s:fg_red .s:normal
-exe "hi! mkdLinkDef"    .s:bg_none .s:fg_white .s:none
+exe "hi! mkdLinkDef"    .s:bg_none .s:fg_white .s:normal
 hi link mkdCode         Normal
 hi link mkdDelimiter    Type
 hi link mkdListItem     String
