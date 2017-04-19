@@ -1,11 +1,23 @@
 <div align='center'>
   <h1>🔥 Firewatch Color Scheme 🔥</h1>
   <p>A theme based on <a href='https://github.com/SebastianSzturo/firewatch-syntax'>firewatch-syntax</a> for atom, but for vim!</p>
-  <img alt='Firewatch Go Screenshot' src='https://cldup.com/6tL84RGEdQ.png'/>
 </div>
 
-## Installation
-Add `colorscheme firewatch` to your `.vimrc`
+## Features
+- Truecolor/GUI
+- 256-bit color
+- Dark & Light Themes
+
+## Install
+### [vim-plug](//github.com/junegunn/vim-plug)
+```viml
+call plug#begin()
+Plug 'hhsnopek/vim-firewatch'
+call plug#end()
+```
+
+### Pathogen
+`git clone https://github.com/hhsnopek/vim-firewatch.git ~/.vim/bundle/vim-firewatch`
 
 ### Manual
 ```
@@ -13,8 +25,14 @@ git clone https://github.com/hhsnopek/vim-firewatch.git; \
 mv ./vim-firewatch/colors/firewatch.vim ~/.vim/colors/firewatch.vim
 ```
 
-### Pathogen
-`git clone https://github.com/hhsnopek/vim-firewatch.git ~/.vim/bundle/vim-firewatch`
+## Usage
+Add snippet below to `.vimrc`/`init.vim`
+
+```viml
+set termguicolors " truecolor support
+set background=dark " light
+colorscheme firewatch
+```
 
 ## Modified Syntax
 - html
@@ -25,4 +43,4 @@ mv ./vim-firewatch/colors/firewatch.vim ~/.vim/colors/firewatch.vim
 - go: [fatih/vim-go](//github.com/fatih/vim-go)
 
 ## License
-MIT License - see `LICENSE` for more details.
+MIT © [Henry Snopek](https://hhsnopek.com)
