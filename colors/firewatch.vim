@@ -147,7 +147,7 @@ exe "hi! CursorLineNr" .s:style_none .s:fg_orange
 exe "hi! Question"     .s:style_none .s:fg_blue
 exe "hi! StatusLine"   .s:style_none .s:bg_gray .s:fg_black
 exe "hi! StatusLineNC" .s:style_none .s:bg_gray .s:fg_gray_dark
-" exe "hi! VertSplit"
+exe "hi! VertSplit"    .s:style_none .s:bg_color_inverse .s:bg_color
 exe "hi! Title"        .s:style_bold .s:bg_none .s:fg_red_dark
 " exe "hi! Visual"
 exe "hi! WarningMsg"   .s:style_bold .s:bg_pink_dark .s:fg_white
@@ -243,6 +243,11 @@ exe "hi! netrwList"     .s:bg_none .s:fg_red
 exe "hi! netrwVersion"  .s:bg_none .s:fg_cyan
 exe "hi! netrwTilde"    .s:bg_none .s:fg_gray_dark
 
+" Tabs
+exe "hi! TabLine"       .s:style_none .s:bg_gray .s:fg_gray_dark
+exe "hi! TabLineFill"   .s:style_none .s:bg_gray .s:fg_none
+exe "hi! TabLineSel"    .s:style_none .s:bg_none .s:normal
+"
 " xml
 exe "hi! xmlTag"             .s:bg_none .s:fg_gray
 exe "hi! xmlEndTag"          .s:bg_none .s:fg_red
@@ -253,8 +258,8 @@ exe "hi! xmlProcessingDelim" .s:bg_none .s:fg_gray
 
 " git gutter
 let g:gitgutter_override_sign_column_highlight = 0
-exe "hi! SignColumn"            .s:style_bold .s:bg_none .s:fg_none
-exe "hi! GitGutterAdd"          .s:style_bold .s:bg_none .s:fg_cyan
-exe "hi! GitGutterChange"       .s:style_bold .s:bg_none .s:fg_pink
-exe "hi! GitGutterDelete"			  .s:style_bold .s:bg_none .s:fg_red_dark
-exe "hi! GitGutterChangeDelete" .s:style_bold .s:bg_none .s:fg_red
+exe "hi! SignColumn"            .s:style_bold .s:bg_color .s:fg_none
+exe "hi! GitGutterAdd"          .s:style_bold .s:bg_color .s:fg_cyan
+exe "hi! GitGutterChange"       .s:style_bold .s:bg_color .s:fg_pink
+exe "hi! GitGutterDelete"			  .s:style_bold .s:bg_color .s:fg_red_dark
+exe "hi! GitGutterChangeDelete" .s:style_bold .s:bg_color .s:fg_red
